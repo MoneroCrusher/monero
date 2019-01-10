@@ -208,10 +208,10 @@ extern void aesb_pseudo_round(const uint8_t *in, uint8_t *out, const uint8_t *ex
 #define VARIANT2_2() \
   do if (variant >= 2) \
   { \
-    *U64(hp_state + (j ^ 0x10)) ^= SWAP64LE(hi); \
-    *(U64(hp_state + (j ^ 0x10)) + 1) ^= SWAP64LE(lo); \
-    hi ^= SWAP64LE(*U64(hp_state + (j ^ 0x20))); \
-    lo ^= SWAP64LE(*(U64(hp_state + (j ^ 0x20)) + 1)); \
+    *U64(hp_state + (j ^ 0x30)) ^= SWAP64LE(hi); \
+    *(U64(hp_state + (j ^ 0x30)) + 1) ^= SWAP64LE(lo); \
+    hi ^= SWAP64LE(*U64(hp_state + (j ^ 0x10))); \
+    lo ^= SWAP64LE(*(U64(hp_state + (j ^ 0x10)) + 1)); \
   } while (0)
 
 

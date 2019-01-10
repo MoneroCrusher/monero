@@ -201,8 +201,8 @@ extern void aesb_pseudo_round(const uint8_t *in, uint8_t *out, const uint8_t *ex
 
 #define VARIANT2_2_PORTABLE() \
     if (variant >= 2) { \
-      xor_blocks(long_state + (j ^ 0x10), d); \
-      xor_blocks(d, long_state + (j ^ 0x20)); \
+      xor_blocks(long_state + (j ^ 0x30), d); \
+      xor_blocks(d, long_state + (j ^ 0x10)); \
     }
 
 #define VARIANT2_2() \
